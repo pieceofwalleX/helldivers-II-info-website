@@ -21,7 +21,7 @@ function fillBox(value:number,type:number){
             return Math.floor(value * 10 / 50);
             break;
         case 3:
-            return Math.floor(value * 10 / 110);
+            return 10 - Math.floor(value * 1 / 10);
             break;
         case 4:
             return Math.floor(value * 10 / 1380);
@@ -56,7 +56,7 @@ export function Showcase(props: props){
                                 Capacity
                             </div>
                             <div className="py-2 px-1 pr-6 border-b-2">
-                                Recoil
+                                Control
                             </div>
                             <div className="py-2 px-1 pr-6 ">
                                 Fire Rate
