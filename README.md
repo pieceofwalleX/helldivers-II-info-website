@@ -1,30 +1,31 @@
-# React + TypeScript + Vite
+# HELLDIVERS II PROJECT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##
+![](https://img.shields.io/badge/HI-Hope_you_are_good-blue) ☕
 
-Currently, two official plugins are available:
+This site is a Mini Project that came in my mind,
+In this site you will find the "Best" gear in Helldivers II (weapons,stratagems and some good loadouts).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How I will choose them:
 
-## Expanding the ESLint configuration
+</br>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+![](https://img.shields.io/badge/Weapons_%3A-purple)</br>
+##### I dont plan to test every weapon, </br>
+##### I will pick the Weapons based on a simple calculation(*) and Community Favourites.
 
-- Configure the top-level `parserOptions` property like this:
+![](https://img.shields.io/badge/Stratagems_%3A-red)
+#####  This part is a bit tricky since we don't have the damage values but I will choose the Stratagems that are less likely to kill
+#####  your teammates Coff! Coff! "Mortars" and that do good damage or have a good utility. This will basicly useless since it depends
+#####  if you are fighthing the Bugs or the Automatons but can be a good choice if you dont know what to choose or if you don't want to use
+#####  the loadouts.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+![](https://img.shields.io/badge/Loadouts_%3A-yellow)</br>
+#####  Basicly will be divided by 3 Tiers (LOW < MEDIUM < HIGH) based on the LVL/RANK that you need to unlock the items needed. I want to</br> 
+##### have 3 Tiers with 3 types of PlayStyle (Light | Adjustable | Tank )
+</br>
+
+
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+DPS - RECOIL = X, the higher X's will be the chosen ones. Very Simple 👍
+```
