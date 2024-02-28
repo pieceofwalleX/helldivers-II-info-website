@@ -130,7 +130,7 @@ export function Showcase(props: props){
                 </div>
             </div>
         </a>
-            <div className={`flex flex-col transition duration-200 overflow-hidden -mt-1`}>
+            <div className={`flex flex-col transition duration-200 overflow-hidden -mt-[0.095rem]`}>
                 <div className={`bg-zinc-800 border-b-2 border-l-2 border-r-2 rounded-b border-neutral-700
                 transition duration-300 ${isDropped ? '' : '-translate-y-14'}`}>
                     <ul className='flex font-overpass font-bold text-red-400'>
