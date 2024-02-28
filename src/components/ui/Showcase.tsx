@@ -1,4 +1,5 @@
-import {} from 'lucide-react';
+import {PlusCircle} from 'lucide-react';
+import { useState } from 'react';
 
 
 interface props{
@@ -35,6 +36,11 @@ function fillBox(value:number,type:number){
 
 export function Showcase(props: props){
 
+    const [isDropped,setIsDropped] = useState(false);
+
+    const dropMenu = () => {
+        setIsDropped(!isDropped);
+    }
 
     return(
         <div>
@@ -124,10 +130,44 @@ export function Showcase(props: props){
                 </div>
             </div>
         </a>
-            <div className="flex ml-[calc(20rem-14rem)] items-center justify-center w-28 border-r-2 border-l-2 border-b-2 rounded-b
-            border-neutral-700 h-[calc(26rem-3rem-10rem-11rem)] font-overpass font-bold text-base text-white">
-                +
-            </div>
+            <div className={`flex flex-col transition duration-200 overflow-hidden -mt-1`}>
+                <div className={`bg-zinc-800 border-b-2 border-l-2 border-r-2 rounded-b border-neutral-700
+                transition duration-300 ${isDropped ? '' : '-translate-y-14'}`}>
+                    <ul className='flex font-overpass font-bold text-red-400'>
+                        <li className='flex w-[calc(20rem/4.05)] justify-center border-b-2 border-neutral-950'>
+                            Damage
+                        </li>
+                        <li className='flex w-[calc(20rem/4.05)] justify-center border-b-2 border-neutral-950'>
+                            Capacity
+                        </li>
+                        <li className='flex w-[calc(20rem/4.05)] justify-center border-b-2 border-neutral-950'>
+                            Recoil
+                        </li>
+                        <li className='flex w-[calc(20rem/4.05)] justify-center border-b-2 border-neutral-950'>
+                            Fire Rate
+                        </li>
+                    </ul>
+                    <ul className='flex font-russo text-gray-300'>
+                        <li className='flex w-[calc(20rem/4.05)] justify-center border-r-2 border-neutral-700'>
+                            {props.stats[0]}
+                        </li>
+                        <li className='flex w-[calc(20rem/4.05)] justify-center border-r-2 border-neutral-700'>
+                            {props.stats[1]}
+                        </li>
+                        <li className='flex w-[calc(20rem/4.05)] justify-center border-r-2 border-neutral-700'>
+                            {props.stats[2]}
+                        </li>
+                        <li className='flex w-[calc(20rem/4.05)] justify-center border-neutral-700'>
+                            {props.stats[3]}
+                        </li>
+                    </ul>
+                </div>                     
+                <div className={`flex ml-[calc(20rem-14rem)] items-center justify-center w-28 border-r-2 border-l-2 border-b-2 rounded-b
+                border-neutral-700 h-[calc(26rem-3rem-10rem-11rem)] font-overpass font-bold text-base text-white transition duration-300
+                hover:cursor-pointer ${isDropped ? '' : '-translate-y-[3.1rem]'}`} onClick={dropMenu}>
+                    <PlusCircle className='w-4'/>
+                </div>
+            </div> 
         </div>
     );
 }
