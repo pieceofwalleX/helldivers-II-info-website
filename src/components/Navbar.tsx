@@ -1,7 +1,13 @@
 import { useEffect, useState } from 'react';
 import logo from '../assets/helldivers2.png';
 
-export function Navbar(){
+
+interface props{
+    page:number,
+}
+
+
+export function Navbar({page}: props){
 
     const [isTop, setIsTop] = useState(true);
 
@@ -29,8 +35,8 @@ export function Navbar(){
             </div>
             <div>
                 <ul className='flex font-overpass font-medium text-lg text-white tracking-wider gap-24'>
-                    <a href='/weapons' className='hover:text-yellow-500 hover:cursor-pointer'>
-                       Weapons 
+                    <a href='/weapons' className={`relative hover:text-yellow-500 hover:cursor-pointer ${page == 1 ? 'text-red-400 ' : ''} `}>
+                       Weapons
                     </a>
                     <a href='stratagems' className='hover:text-yellow-500 hover:cursor-pointer'>
                         Stratagems
