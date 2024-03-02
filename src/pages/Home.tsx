@@ -5,7 +5,7 @@ import { Navbar } from "../components/Navbar";
 export function Home(){
     return(
         <div>
-            <Navbar/>
+            <Navbar page={0}/>
             <Hero/>
             <Information/>
         </div>
