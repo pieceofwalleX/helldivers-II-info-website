@@ -37,8 +37,9 @@ function fillBox(value:number,type:number){
 
 export function Showcase(props: props){
 
+    const yb_colorscheme = 'bg-yellow-500 border-yellow-300 text-yellow-400';
+    const yr_colorscheme = 'bg-red-600 border-red-400 red-yellow-400';
     
-
     const [isDropped,setIsDropped] = useState(false);
 
     const dropMenu = () => {
@@ -49,7 +50,8 @@ export function Showcase(props: props){
         <div>
         <a href={`/weapons/${props.name}`}>
             <div className="border-2 rounded border-neutral-700 h-[24rem] w-80">
-                <div className="flex border-b-2 border-neutral-800 h-12 bg-[#01212f] justify-center items-center font-russo text-yellow-400">
+                <div className={`flex border-b-2 border-neutral-800 h-12  justify-center items-center font-russo 
+                ${props.color_scheme == "yellow-blue" ? 'text-yellow-400 bg-[#01212f] ' : 'text-red-500 bg-neutral-950'}`}>
                     {props.name}
                 </div>
                 <div className="h-42 border-b-2 border-neutral-800 ">
@@ -80,7 +82,7 @@ export function Showcase(props: props){
                                         key={index}
                                         className={`border-2 transform -skew-x-12 px-1 py-2 ${
                                             index < fillBox(props.stats[0], 1)
-                                                ? 'bg-yellow-500 border-yellow-300'
+                                                ? props.color_scheme == "yellow-blue" ? yb_colorscheme : yr_colorscheme
                                                 : ''
                                         }`}
                                     ></div>
@@ -94,7 +96,7 @@ export function Showcase(props: props){
                                         key={index}
                                         className={`border-2 transform -skew-x-12 px-1 py-2 ${
                                             index < fillBox(props.stats[1], 2)
-                                                ? 'bg-yellow-500 border-yellow-300'
+                                                ? props.color_scheme == "yellow-blue" ? yb_colorscheme : yr_colorscheme
                                                 : ''
                                         }`}
                                     ></div>
@@ -108,7 +110,7 @@ export function Showcase(props: props){
                                         key={index}
                                         className={`border-2 transform -skew-x-12 px-1 py-2 ${
                                             index < fillBox(props.stats[2], 3)
-                                                ? 'bg-yellow-500 border-yellow-300'
+                                                ? props.color_scheme == "yellow-blue" ? yb_colorscheme : yr_colorscheme
                                                 : ''
                                         }`}
                                     ></div>
@@ -122,7 +124,7 @@ export function Showcase(props: props){
                                         key={index}
                                         className={`border-2 transform -skew-x-12 px-1 py-2 ${
                                             index < fillBox(props.stats[3], 4)
-                                                ? 'bg-yellow-500 border-yellow-300'
+                                                ? props.color_scheme == "yellow-blue" ? yb_colorscheme : yr_colorscheme
                                                 : ''
                                         }`}
                                     ></div>
