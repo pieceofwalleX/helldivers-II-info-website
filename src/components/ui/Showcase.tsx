@@ -5,7 +5,8 @@ import { useState } from 'react';
 interface props{
     name:string,
     img:string,
-    stats:[number,number,number,number,number,string,string],
+    stats:[number,number,number,number,number],
+    color_scheme: 'yellow-blue' | 'yellow-red'
 };
 
 //Max dmg = 360
@@ -36,6 +37,8 @@ function fillBox(value:number,type:number){
 
 export function Showcase(props: props){
 
+    
+
     const [isDropped,setIsDropped] = useState(false);
 
     const dropMenu = () => {
@@ -46,7 +49,7 @@ export function Showcase(props: props){
         <div>
         <a href={`/weapons/${props.name}`}>
             <div className="border-2 rounded border-neutral-700 h-[24rem] w-80">
-                <div className="flex border-b-2 border-neutral-800 h-12 justify-center items-center font-russo text-yellow-400">
+                <div className="flex border-b-2 border-neutral-800 h-12 bg-[#01212f] justify-center items-center font-russo text-yellow-400">
                     {props.name}
                 </div>
                 <div className="h-42 border-b-2 border-neutral-800 ">
@@ -132,7 +135,7 @@ export function Showcase(props: props){
         </a>
             <div className={`flex flex-col transition duration-200 overflow-hidden -mt-[0.095rem]`}>
                 <div className={`bg-zinc-800 border-b-2 border-l-2 border-r-2 rounded-b border-neutral-700
-                transition duration-300 ${isDropped ? '' : '-translate-y-14'}`}>
+                transition duration-300 w-fit ${isDropped ? '' : '-translate-y-14'}`}>
                     <ul className='flex font-overpass font-bold text-red-400'>
                         <li className='flex w-[calc(20rem/4.05)] justify-center border-b-2 border-neutral-950'>
                             Damage
