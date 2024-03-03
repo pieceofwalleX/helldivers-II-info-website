@@ -24,8 +24,8 @@ export function Information(){
                         {data?.map(weapon => (
                             // <div>{weapon.stats.recoil} OI</div>
                             <Showcase key={weapon.id} name = {weapon.name} img={weapon.img} stats={
-                                [weapon.stats.damage,weapon.stats.ammo,weapon.stats.recoil,weapon.stats.fire_rate,weapon.stats.price]
-                            } />
+                                [weapon.stats.damage,weapon.stats.ammo,weapon.stats.recoil,weapon.stats.fire_rate,weapon.stats.price]}
+                                color_scheme="yellow-blue" />
                         ))}
                     </ul>
                 </div>
