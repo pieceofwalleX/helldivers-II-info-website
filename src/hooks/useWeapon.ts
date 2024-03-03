@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
-interface WeaponData {
+export interface WeaponData {
     id:number,
     name_id:string,
     name:string,
@@ -35,6 +35,16 @@ export function useWeaponId(ids: number[]) {
             const promises = ids.map(id => axios.get<WeaponData>(`http://localhost:8000/weapons/${id}`)); // Mapeando sobre os IDs para criar uma matriz de promessas
             const responses = await Promise.all(promises); // Esperando que todas as promessas sejam resolvidas
             return responses.map(res => res.data); // Retornando os dados dos responses
+        }
+    });
+}
+
+export function useWeaponByNameId(nameId: string) {
+    return useQuery({
+        queryKey: ["weapons", nameId], // Usando uma matriz para a chave de consulta com os IDs
+        queryFn: async () => {
+            const res = await axios.get<WeaponData[]>(`http://localhost:8000/weapons?name_id=${nameId}`);
+            return res?.data[0];
         }
     });
 }

@@ -5,7 +5,7 @@ import { useWeaponId } from "../hooks/useWeapon";
 
 export function Information(){
 
-    const {data, isLoading , error} = useWeaponId([1,2,3]);
+    const {data, isLoading , error} = useWeaponId([1,7,8]);
 
     if (isLoading) return <div>Loading...</div>;
     if (error) return <div>Erro ao carregar os dados: {error.message}</div>;
@@ -23,7 +23,7 @@ export function Information(){
                         <Showcase name='SMG-37 Defender' img={weapon3} stats={[70,45,10,520,15,'LAP','Warbonds']} /> */}
                         {data?.map(weapon => (
                             // <div>{weapon.stats.recoil} OI</div>
-                            <Showcase key={weapon.id} name = {weapon.name} img={weapon.img} stats={
+                            <Showcase key={weapon.id} name={weapon.name} name_id={weapon.name_id} img={weapon.img} stats={
                                 [weapon.stats.damage,weapon.stats.ammo,weapon.stats.recoil,weapon.stats.fire_rate,weapon.stats.price]}
                                 color_scheme="yellow-blue" />
                         ))}

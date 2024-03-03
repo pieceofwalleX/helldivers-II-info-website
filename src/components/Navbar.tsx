@@ -26,7 +26,7 @@ export function Navbar({page}: props){
 
 
     return(
-        <div className={` sticky top-0 z-50 transition duration-300 ${isTop ? 'bg-transparent' : 'bg-[#01212f]'} h-20 flex 
+        <div className={` sticky top-0 z-50 transition duration-300 ${isTop && page == 0 ? 'bg-transparent' : page == 1 ? 'bg-neutral-900' :'bg-[#01212f]'} h-20 flex 
         items-center justify-between px-52`}>
             <div>
                 <a href='/'>

@@ -1,9 +1,10 @@
-import {PlusCircle} from 'lucide-react';
+import {Eye, EyeOff} from 'lucide-react';
 import { useState } from 'react';
 
 
 interface props{
     name:string,
+    name_id:string,
     img:string,
     stats:[number,number,number,number,number],
     color_scheme: 'yellow-blue' | 'yellow-red'
@@ -48,7 +49,7 @@ export function Showcase(props: props){
 
     return(
         <div>
-        <a href={`/weapons/${props.name}`}>
+        <a href={`/weapons/${props.name_id}`}>
             <div className="border-2 rounded border-neutral-700 h-[24rem] w-80">
                 <div className={`flex border-b-2 border-neutral-800 h-12  justify-center items-center font-russo 
                 ${props.color_scheme == "yellow-blue" ? 'text-yellow-400 bg-[#01212f] ' : 'text-red-500 bg-neutral-950'}`}>
@@ -167,10 +168,15 @@ export function Showcase(props: props){
                         </li>
                     </ul>
                 </div>                     
-                <div className={`flex ml-[calc(20rem-14rem)] items-center justify-center w-28 border-r-2 border-l-2 border-b-2 rounded-b
+                <div className={`flex ml-[calc(20rem-12rem)] items-center justify-center w-12 border-r-2 border-l-2 border-b-2 rounded-b
                 border-neutral-700 h-[calc(26rem-3rem-10rem-11rem)] font-overpass font-bold text-base text-white transition duration-300
                 hover:cursor-pointer ${isDropped ? '' : '-translate-y-[3.1rem]'}`} onClick={dropMenu}>
-                    <PlusCircle className='w-4'/>
+                    {
+                        isDropped ? 
+                        <EyeOff className='w-4'/>
+                        : <Eye className='w-4'/>
+                    }
+                    
                 </div>
             </div> 
         </div>

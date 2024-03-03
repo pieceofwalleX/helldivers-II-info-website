@@ -15,7 +15,7 @@ export function Weapons() {
     <div className="bg-neutral-900 ">
       <Navbar page={1} />
       <div className="flex w-full pl-40 py-28 bg-neutral-900 bg-weapon-pattern bg-cover bg-center">
-        <div className="flex flex-col border border-white bg-neutral-900 rounded w-72 h-fit pb-5 font-overpass font-semibold">
+        <div className="flex flex-col border border-white bg-neutral-900 rounded p-0.5 w-72 h-fit pb-5 font-overpass font-semibold">
           <div className="flex bg-neutral-950 w-full h-12 justify-center items-center text-lg text-red-700 ">
             Filters
             <FilterIcon className="ml-2 size-4" />
@@ -81,12 +81,13 @@ export function Weapons() {
             </ul>
           </div>
         </div>
-        <div className="grid auto-cols-min 2xl:grid-cols-3 gap-4 bg-gradient-to-br from-neutral-900 to-neutral-800 w-full h-fit ml-12 pl-52
+        <div className=" flex flex-wrap gap-12 bg-gradient-to-br from-neutral-900 to-neutral-800 w-full h-fit ml-12 justify-center items-center
          py-10 rounded border border-blue-200 max-w-[72%]">
           {data?.map((weapon) => (
             <Showcase
               key={weapon.id}
               name={weapon.name}
+              name_id={weapon.name_id}
               img={weapon.img}
               stats={[
                 weapon.stats.damage,
