@@ -15,6 +15,7 @@ export default {
     extend: {
       backgroundImage: {
         'hero-pattern': "url('/src/assets/hero.jpg')",
+        'weapon-pattern': "url('/src/assets/weapon.jpg')"
       },
       fontFamily: {
         'display': ['Lato'],
