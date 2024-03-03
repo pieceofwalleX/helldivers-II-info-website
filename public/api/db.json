@@ -1,0 +1,182 @@
+{
+    "weapons": [
+        {
+            "id": "1",
+            "name_id": "ar-23_liberator",
+            "name": "AR-23 Liberator",
+            "img":"../src/assets/AR-23 Liberator.png",
+            "classe":"rifle",
+            "fire_mode": [
+                "Single",
+                "Auto"
+            ],
+            "stats": {
+                "damage": 55,
+                "ammo": 45,
+                "recoil": 15,
+                "fire_rate": 640,
+                "price": 0
+            }
+        },
+        {
+            "id": "2",
+            "name_id": "ar-23p_liberator_penetrator",
+            "name": "AR-23P Liberator Penetrator",
+            "img":"../src/assets/AR-23P Liberator Penetrator.png",
+            "classe":"rifle",
+            "fire_mode": [
+                "Single",
+                "Burst"
+            ],
+            "stats": {
+                "damage": 45,
+                "ammo": 30,
+                "recoil": 19,
+                "fire_rate": 640,
+                "price": 40
+            }
+        },
+        {
+            "id": "3",
+            "name_id": "ar-23e_liberator_explosive",
+            "name": "AR-23E Liberator Explosive",
+            "img":"../src/assets/AR-23E Liberator Explosive.png",
+            "classe":"rifle",
+            "fire_mode": [
+                "Single",
+                "Auto"
+            ],
+            "stats": {
+                "damage": 55,
+                "ammo": 30,
+                "recoil": 28,
+                "fire_rate": 320,
+                "price": 20
+            }
+        },
+        {
+            "id": "4",
+            "name_id": "r-63_diligence",
+            "name": "R-63 Diligence",
+            "img":"../src/assets/R-63 Diligence.png",
+            "classe":"marksman",
+            "fire_mode": [
+                "Single",
+                "Auto"
+            ],
+            "stats": {
+                "damage": 112,
+                "ammo": 20,
+                "recoil": 35,
+                "fire_rate": 350,
+                "price": 0 
+            }
+        },
+        {
+            "id": "5",
+            "name_id": "r-63cs_diligence_cs",
+            "name": "R-63CS Diligence Counter Sniper",
+            "img":"../src/assets/R-63CS Diligence Counter Sniper.png",
+            "classe":"marksman",
+            "fire_mode": [
+                "Single",
+                "Auto"
+            ],
+            "stats": {
+                "damage": 128,
+                "ammo": 12,
+                "recoil": 53,
+                "fire_rate": 350,
+                "price": 40 
+            }
+        },
+        {
+            "id": "6",
+            "name_id": "mp-98_knight",
+            "name": "MP-98 Knight",
+            "img":"../src/assets/MP-98 Knight.png",
+            "classe":"smg",
+            "fire_mode": [
+                "Single",
+                "Auto"
+            ],
+            "stats": {
+                "damage": 50,
+                "ammo": 50,
+                "recoil": 20,
+                "fire_rate": 1380,
+                "price": 0 
+            }
+        },
+        {
+            "id": "7",
+            "name_id": "smg-37_defender",
+            "name": "SMG-37 Defender",
+            "img":"../src/assets/SMG-37 Defender.png",
+            "classe":"smg",
+            "fire_mode": [
+                "Single",
+                "Auto"
+            ],
+            "stats": {
+                "damage": 70,
+                "ammo": 45,
+                "recoil": 10,
+                "fire_rate": 520,
+                "price": 15
+            }
+        },
+        {
+            "id": "8",
+            "name_id": "sg-225_breaker",
+            "name": "SG-225 Breaker",
+            "img":"../src/assets/sg-225.png",
+            "classe":"shotgun",
+            "fire_mode": [
+                "Single",
+                "Auto"
+            ],
+            "stats": {
+                "damage": 330,
+                "ammo": 16,
+                "recoil": 30,
+                "fire_rate": 300,
+                "price": 20
+            }
+        },
+        {
+            "id": "9",
+            "name_id": "sg-8_punisher",
+            "name": "SG-8 Punisher",
+            "img":"../src/assets/SG-8 Punisher.png",
+            "classe":"shotgun",
+            "fire_mode": [
+                "Single"
+            ],
+            "stats": {
+                "damage": 360,
+                "ammo": 16,
+                "recoil": 110,
+                "fire_rate": 80,
+                "price": 0
+            }
+        },
+        {
+            "id": "10",
+            "name_id": "las-5_scythe",
+            "name": "Las-5 Scythe",
+            "img":"../src/assets/Las-5 Scythe.png",
+            "classe":"energy",
+            "fire_mode": [
+                "Auto"
+            ],
+            "stats": {
+                "damage": 300,
+                "ammo": 8,
+                "recoil": 1,
+                "fire_rate": 0,
+                "price": 0
+            }
+        }
+    ]
+}
